@@ -17,6 +17,7 @@
   - Data Warehouse com Spark
   - Spark Streaming
   - 3 Projetos completos
+
 + Engenharia de Dados com Hadoop e Spark
   - Vai extrair dados  usando R, Python e Pig, vai compreender como aplicar algoritmos de Machine Learning no Hadoop e como configurar Hadoop e Spark, criando uma poderosa solução de Big Data.
   - Hadoop
