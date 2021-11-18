@@ -73,12 +73,14 @@ Se sua organização nunca criou um Cluster do Amazon RedShift, você está qual
 
 Sua organização recebe 750 horas gratuitas por mês, suficientes para executar continuamente um nó DC2.Large com 160GB de armazenamento SSD compactado. Quando o teste gratuito de dois meses expirar ou a utilização exceder 750 horas por mês, você poderá encerrar o Cluster, evitando qualquer cobrança, ou mantê-lo em execução com nossa taxa sob demanda padrão.
 
-**COmo eu fiz para criar**
+**Como eu fiz para criar**
 + Selecionar free-trail e dar netx e inserir nome de identificador de Cluster e credenciais
 
 **o susurro**
 identify: rhavel-RedShift-Cluster-1
 rhavel :: royal-Thunder_-_re7
+
+Nova senha: royal-Thunder_-_re8
 
 **credenciais**
 Database name: dev, 
@@ -121,6 +123,36 @@ Vá no ENDPOINT do Cluster e procure pelas configurançaoes de segurança (InBou
 
 Busque por "Editi inbou rules":
 + TIpo 'RedShift"/ Protocolo TCP; Src: Custom/ ANywhere
+
+**ULTRA=====================================================**
+**ULTRA=====================================================**
+**ULTRA=====================================================**
+**ULTRA=====================================================**
+**ULTRA=====================================================**
+**ULTRA=====================================================**
+**ULTRA=====================================================**
+**ULTRA=====================================================**
+
+Consegui conectar nessa bosta.
++ Como tudo que é podre nesse mundo, ao conectar de primeira, fornecendo todos os parâmetros, vai dar problema
++ PORQU EÉ UMA BOSTA
++ Para conectar voce tem que ter feito 2 coisa que nem DEUS sabia que precisava
+  - 1. Habilitar para acesso Externo
+  - 2. Habilitar essa configuraçâo de inbound (entrada e saida) do VPC security Group
+
+** Habilitar para acesso Externo**
++ ABSOLUTAMNETE NINGUEM FALA DISSO, MAS É UMA CONFIGURAÇÂO ANTERIOR A PÁGINA QUE VOCE VER OS DADOS DO SEU CLUSTER
++ NO MEU CASO FOI NA url: https://console.aws.amazon.com/redshiftv2/home?region=us-east-1#clusters
++ sELECIONA NO CLUSTER > ACTIONS > modify publicy acess settings
++ ESTA PORRA INCIA NAO ESTANDO DESABILITADA, ENTAO HABILITA
+
+**INBOUD MALUCO**
++ Faça parecido com o do video, o meu ficou assim com a VPC que to usando:
+sgr-039f68fe80c9ada7e	IPv4	Redshift	TCP	5439	0.0.0.0/0	–
+sgr-0d2f469b44a32c033	IPv6	Redshift	TCP	5439	::/0	–
+
+Ou seja, 2 regras de entras, as duas para RedShift para qualquer IPV4 e qualquer IPV6
+
 
 
 ## Precificação

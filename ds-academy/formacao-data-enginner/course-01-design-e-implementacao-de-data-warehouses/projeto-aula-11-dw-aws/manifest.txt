@@ -1,0 +1,9 @@
+
+{
+	"entries": [
+		{"url":"s3://red-shift-bucket-rhavel/vendas1.txt.gz", "mandatory":true},
+		{"url":"s3://red-shift-bucket-rhavel/vendas2.txt.gz", "mandatory":true},
+		{"url":"s3://red-shift-bucket-rhavel/vendas3.txt.gz", "mandatory":true},
+		{"url":"s3://red-shift-bucket-rhavel/vendas4.txt.gz", "mandatory":true}
+	]
+}
