@@ -27,9 +27,9 @@ Termo generico que inclui apps, ferramentas e melhores praticas para acesso e an
 
 A difenreça entre ambos já vimos no cap anterior
 
-img-2-1
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-01-design-e-implementacao-de-data-warehouses/imgs/img-2-1.png)
 
-img-2-2
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-01-design-e-implementacao-de-data-warehouses/imgs/img-2-2.png)
 
 No DW já tem dados esttruturadps
 
@@ -95,7 +95,7 @@ Há 3 sub-eataps
   - Lembre-se, se tiver muito detalhe, vai ficar mais lempo
 + Identificar os metadados e asim criar um meta-data-dictionary
 
-img-2-3
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-01-design-e-implementacao-de-data-warehouses/imgs/img-2-3.png)
 
 É estabelecer dimensoes que atendam diversos processao da empresa
 
@@ -129,7 +129,11 @@ SnowFlake
 **O que é normalizaçoa em banco de dados**
 + É voce divir uma tabela em duas
 
-img-2-4 a 6 
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-01-design-e-implementacao-de-data-warehouses/imgs/img-2-4.png)
+
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-01-design-e-implementacao-de-data-warehouses/imgs/img-2-5.png)
+
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-01-design-e-implementacao-de-data-warehouses/imgs/img-2-6.png)
 
 ## Tabela Fato e DImensao
 
@@ -142,7 +146,7 @@ Tabela Dimensao
 + Infromaçoes com nivel de musança muito baixo
 + Ex: Produto (o nome nao deve mudar)
 
-img-2-7
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-01-design-e-implementacao-de-data-warehouses/imgs/img-2-7.png)
 
 
 
@@ -154,4 +158,4 @@ Saô coisas como:
 + Determinar a arquitetura, Particionamento, Indexaçao, Segurnaça, Codigo DDL, Definir os MetaDados, Sizing (tamanho do BD)
 
 
-img-2-8
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-01-design-e-implementacao-de-data-warehouses/imgs/img-2-8.png)

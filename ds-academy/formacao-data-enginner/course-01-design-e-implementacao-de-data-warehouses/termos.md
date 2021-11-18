@@ -22,3 +22,10 @@ _ Usado spara plcaiaçoes analticias, é o modelo de um DW, que é difenrete dos
 ETL (Extract, Tranformation, Load):
 + É um conceito, basiamcnete é pegar os dados e mandar par aoutro lguar fazendo ou nao alguma alteraçao
 + pOde se usar desde Bash até coisas complexasa para fazer isso
+
+Surrogate Key: A Surrogate Key é uma chave artificial e auto incremental.
++ A palavra artificial vem do tipo, porque ela não existe em lugar nenhum, não está lá no transacional como a Natural Key, ela é criada no Data Warehouse.
++ E é auto incremental porque toda vez que é chamada, troca de número, então ela começa com 1 e vai indo para 2, 3, 4, e assim por diante.
++ Resumindo: ela é a famosa sequence do banco de dados ou a sequência no Excel.
++ Uma Surrogate Key nada mais é que um campo com as características de uma Primary Key, e é gerada automaticamente na hora da carga, quando você carrega a dimensão no ETL.
++  Surrogate Key : é utilizada para referenciar a dimensão na fato; é auto incremental; é uma chave artificial; é criada no Data Warehouse; não pode se repetir
