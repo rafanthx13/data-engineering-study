@@ -7,17 +7,17 @@ Alinhar a termonologia, arquitetura e como é o conteiode um datalake
 
 O datalake é um conceito apra uma estrategia central de gestâo de dados: **É UM RESPOSITÓRIO DE DADOS**, Como se fosse um bloco único (Singel Customer View)
 
-img-c2-2-01
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-2-01.png)
 
 SOmente com um grande volume dae dados é possivel fazr IA, que é nada mais que estatístaca 
 
 ## Conceito de DataLake
 
-img-c2-2-02
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-2-02.png)
 
-img-c2-2-03
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-2-03.png)
 
-img-c2-2-04
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-2-04.png)
 
 
 Principias conceitos
@@ -31,13 +31,13 @@ Se a emrpesa nao tem uma cultura orientada a dados, esquece datalake.
 
 Beneficios
 
-img-c2-2-05
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-2-05.png)
 
-img-c2-2-06
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-2-06.png)
 
 Desvantagesn
 
-img-c2-2-07
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-2-08.png)
 
 ## Arquitetura do DataLake
 
@@ -45,13 +45,13 @@ Há duas formas de lahar o datalak
 
 Olhando por serviços que ela oferece
 
-img-c2-2-09
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-2-09.png)
 
 Vamoe estaudar coada uma
 
 A estrutura final fica da seuinte forma
 
-img-c2-2-11
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-2-11.png)
 
 ### Aquisiçâo de dados
 
@@ -89,7 +89,7 @@ Baseada na palestra encontrda no link abaixo
 
 https://www.youtube.com/watch?v=bTRNkouGO-Q
 
-img-c2-2-12
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-2-12.png)
 
 CIclo de vida de uma arquitetura agil dos dados:
 + começa em 'logical data lake"
@@ -98,7 +98,7 @@ CIclo de vida de uma arquitetura agil dos dados:
 
 ## Quais plataformas usamos para construir DataLake
 
-img-c2-2-13
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-2-13.png)
 
 => 1. COleta, 2. Ingestao (quando relamente inserimos em algum lugar no repositorio); 3. Bledn (mistura das varais fontes); 4. Tranforma eles, Puplica e os usa em distribute
 
@@ -115,7 +115,7 @@ Para etapa 2: INGEST
 
 A seguri tem a 'kylo plataform', uam statrupque tem um modelo de Datalake interressanete
 
-img-c2-2-14
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-2-14.png)
 
 A Kylo é um prdouto e criaram uma gestâo de um datalake, uma arquitetura completa
 
@@ -129,19 +129,19 @@ E tudo isso com soluçâo OpenSource
 
 **Busque resoolver um soluçao de negpocio**
 
-## COmo construir um datalake
+## Como construir um datalake
 
 Uma visao geral, como voce conseguiria construir um datalake.
 
 Visao em camadas
 
-img-c2-2-16
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-2-16.png)
 
 EM geralessa camaasd sao encontradas em todo datalae, mas boa parte sao bem opscionais, como a acamada de mensagens
 
 ### 1. Aquisiçao de dados
 
-img-c2-2-17
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-2-17.png)
 
 Precismos de um conector que seja capaz de pegar diversos fontes de dados. É uma camada de transporte de dados, é possivel fazxer algum ETL mas é reocmendado que seja pouco, pois nao é a sua repsonsabildiade.
 
@@ -157,28 +157,28 @@ Iremos ver 2 caps: buscar os dados em bathc (3) e em striemgin (4)
 
 cap5: apache kafka
 
-img-c2-2-18
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-2-18.png)
 
 É o que cahamamos de middleware. Ela é muito usada quando voce temum sistema distribuido
 
 É tambem chamado de MOM. A troca de mensagem é melhor do que compartilhar uma mesma memoria, pois assim OS SISTSEMAS/SO PODEM SER COMPLETAMENTE DIFERNTES ENTRE SI.
 
-img-c2-2-19
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-2-19.png)
 
-img-c2-2-20
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-2-20.png)
 
 O Kafka é extremamente excelente para fazer isso
 
 ### 3. Camad de Ingestâo de dados
 
-img-c2-2-21
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-2-21.png)
 
 Receber as mensagen e levalas para processamento. Esstá junto do Kafka
 
 Aqui já posso começar a pensar em aplicar o ETL
 
 ### 4. Camada de procesasmento
- 
+
 Dividia em duas partes: Batch Layer e Stream Layer (tambem chamada na literatura de Speed Layer)
 + Batche: MapReduce, pois prcessa em disco. O Spark nao consegue fazer isso com uma tonelada de arquivos
 + Stremaing: Spark, é muito mais desafiador e etc.
@@ -191,7 +191,7 @@ A camada que sim, armaqenz os dados.
 
 Paralela a camad de procesamsento, pois a origem e destino deses processamento é nessa camdada
 
-img-c2-2-22
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-2-22.png)
 
 ## Bonus  Roadmap Para um Data Lake de Sucesso
 
@@ -244,7 +244,7 @@ Em geral, usamos o Data Lake para armazenar:
 	• Streaming de dados
 	• Dados históricos que não foram migrados para os sistemas de produção
 	• Dados que podem ser úteis para análises no futuro
-
+	
 	Data Lakes tornam-se pântanos de dados se não são gerenciados
 corretamente. Certifique-se de que seu Data Lake possui as seguintes
 características:
@@ -254,7 +254,7 @@ características:
 	• Integração para ser alimentado com dados de diferentes fontes
 	• Acessibilidade para “self-service” e oferecer aos Cientistas de Dados a
 	  oportunidade de aplicar Real-Time Analytics
-
+	
 	O Roadmap de sucesso para um Data Lake, deve contemplar:
 
 1. Amplas capacidades analíticas
