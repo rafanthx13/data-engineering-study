@@ -1,125 +1,117 @@
 # Data Lake  - AWS EC2 - Processando Batch
 
-## Resumo
 
-## Links
 
-## PARTE 1 -INTRODUÇAO E TEOIRIA
+## PARTE 1 - INTRODUÇÃO E TEORIA
 
 ### Intro
 
-Vamos construir um DataLake na AWS durante 5 capítulos, próximo do mundo real. E no fim, há o DatLake Servelss onde você cria o datalake sem especificar a infra.
+Vamos construir um Data Lake na AWS durante 5 capítulos, próximo do mundo real. E no fim, há o Data Lake Servelss onde você cria o datalake sem especificar a infra.
 
-img-c2-5-01
-
-### Aquisiçâod e Dados
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-5-01.png)
+### Aquisição de Dados
 
 É a porta de entrada do nosso datalake.
 
-Vamos trabalhar com DFS e Sccop: Que permite conectar a bancos relacionais e levar para a HDFS e vice-verça
+Vamos trabalhar com HDFS e Sqoop: Que permite conectar a bancos relacionais e levar para a HDFS e vice-versa
 
-**HDFS** e  **Apaceh Scoop**
+**HDFS** e  **Apache Scoop**
 
 ### O que são dados em Batch
 
 É o ETL do Pentaho
 
-img-c2-5-06 (2, a 6)
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-5-06 (2, a 6).png)
+### Real-Time x Batch Data
 
-## Real-Time x Batch Data
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-5-07.png)
+O Real time é o processamento na hora, enquanto que o Batch espera um tempo para fazer (em geral, faz de noite a carga)
 
-img-c2-5-07
-
-O REal time é oprocessamento na hora, enquanto que o Bathc esepra um tempo para fazer (em geral, faz de noite a carga)
-
-## Mapeando os dados do nosos projeto
+### Mapeando os dados do nosso projeto
 
 Este é um schema conceitual
 
-img-c2-5-08
-
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-5-08.png)
 RMDS : Banco RElacional
-Sccop: Pega os dados do banco relacional (Ferramente de ETL)
-Haddop: Implementa o HDFS nosos storage
+Sqoop: Pega os dados do banco relacional (Ferramenta de ETL)
+Hadoop: Implementa o HDFS nossos storage
 
-Os dados de strremin vamos pegar com o APache FLume e Kafaka (iremos ver isos no ppróximocapítulo_
+Os dados de streaming vamos pegar com o Apache Flume e Kafka (iremos ver isso no próximo capítulo)
 
 ## PARTE 2 - APACHE SQOOP
 
-## O que é Apache Sccop
+###  O que é Apache Sqoop
 
-Ferramenta para levar dados de banco de dados esturutados para o Haddop. 
+Ferramenta para levar dados de banco de dados estruturados para o Hadoop. 
 
-Usaremos uma lingaugem SQL para acessar e pegar os dados do RMDS.
+Usaremos uma linguagem SQL para acessar e pegar os dados do RMDS.
 
 Usaremos o Sqoop v1 1.4.7: Ele é mais simples
 
-### IMport/Export com Sqoop/Haddop
+### Import/Export com Sqoop/Hadoop
 
 **Import**
-+ EU conecto o scocop ao RMDS
-+ Eu posso pegar parte dos daods ou todo ele
-img-c2-5-09
-
++ EU conecto o sqoop ao RMDS
++ Eu posso pegar parte dos dados ou todo ele
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-5-09.png)
 **Export**
-img-c2-5-10
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-02-data-lake/imgs/img-c2-5-10.png)
+### Conectores Sqoop
 
-### COnectores Sqoop
-
-Antes de começar o Sqoop, verifique  na sua documentaçâo se ele tem conectrores para o seu banco de dados.
+Antes de começar o Sqoop, verifique  na sua documentação se ele tem conectores para o seu banco de dados.
 
 Usaremos o PostGreSQL
 
-## PARTE 3 - MONTANTO EC2 NA AWS
+## PARTE 3 - MONTANDO EC2 NA AWS
 
-### Start DataLake na AWS
+### Start Date Lake na AWS
 
 Essa aula explica
 + No primeiros 4 minutos, o motivo de ser melhor criar em nuvem
-+ Profissional: A AWS é a maior do market-share, por ser lider, ela disponibiliza varios certificados.
++ Profissional: A AWS é a maior do market-share, por ser líder, ela disponibiliza vários certificados.
 
 ESTE NÃO É UM CURSO DE AWS
 
-### Como monetizar o DataLake em Nuvem
+### Como monetizar o Data Lake em Nuvem
 
 Há 3 profissionais:
 
-+ Funcionario:
++ Funcionário:
 + Consultor:
 + Empreendedor:
 
-**A área de BIg Data, ML oferece a grande vantagem de permitier que voce empreenda, pois nao é todo mundo que usa isso. E boa parte das ferramentas sâo open-source, free**
+**A área de Big Data, ML oferece a grande vantagem de permitir que você empreenda, pois não é todo mundo que usa isso. E boa parte das ferramentas são open-source, free**
 
 
-**O INSTRUTOR TEM VARIAS CONTA NA AWS, ONDE TEM DW, ML, BIG DATA E OFERECE AO CLIENTE COMO PRIDUTO**
+**O INSTRUTOR TEM VARIAS CONTA NA AWS, ONDE TEM DW, ML, BIG DATA E OFERECE AO CLIENTE COMO PRODUTO**
 
-**Muitas empresa nao tem como ter um time de TI só pra fazer isso, se voce pode fazer dirto para lea e entregar como produto,fic amuito bom**
+**Muitas empresa não tem como ter um time de TI só pra fazer isso, se você pode fazer direto para ela e entregar como produto,fica muito bom**
 
 **COMO MONETIZAR COM DATA LAKE**
 
-+ Voce pode vender toda a estrutura de DataLake como um produto.
-+ Crie um web-site oferencedo isso: armazneamneto, procesasmento e combra dele por gigaByte, teraByte
++ Você pode vender toda a estrutura de Data Lake como um produto.
++ Crie um web-site oferecendo isso: armazenamento, processamento e cobra dele por gigaByte, teraByte
 
 Outro exemplo:
-+ Criar ua ferramenta para captura de dados nao-estruturados e vender isso par ao cliente 
++ Criar uma ferramenta para captura de dados não-estruturados e vender isso para o cliente 
 
-**HOJE, FALSE MUITO DE ML, MAS NAO DA PRA FAZER ML SEM TER DADOS BEM MODELADOS, ESSA É UMA ARE QUE ESTÁ CRESCENDO: DATA ENGERIING**
+**HOJE, HÁ MUITO DE ML, MAS NAO DA PRA FAZER ML SEM TER DADOS BEM MODELADOS, ESSA É UMA ARE QUE ESTÁ CRESCENDO: DATA ENGINEERING**
 
 ### Conta AWS
 
 VIXI:
 
-PARA IMPLEMENTAR AS COISA DAS AULAS, SERÁ NECESSÁRIO USAR SERVIÇOES PAGAOS. TANTO É QUE VÂ OFERECRER R$ 100,00 para reembolso por ter que gastar dinheiro na EC2.
+PARA IMPLEMENTAR AS COISA DAS AULAS, SERÁ NECESSÁRIO USAR SERVIÇOS PAGOS. TANTO É QUE VAI OFERECER R$ 100,00 para reembolso por ter que gastar dinheiro na EC2.
 
-Com R$10,,0 voce caonsegue fazezr esse e os proximos capitulos 2 vezes
+Com R$10,,0 você consegue fazer esse e os proximos capitulos 2 vezes
 
 ### AWS EC2
 
-ElascticCloundComputer
+Elastic Cloud Computer
 
 Ele disponibiliza capacidade computacional.
 
-O EC2 pode ser usadao gratuitamente, 750h mas para uma instancia com apenas 1GB de RAM, Isso limita agente para fazer um Haddop.
+O EC2 pode ser usado gratuitamente, 750h mas para uma instância com apenas 1GB de RAM, Isso limita o agente para fazer um Hadoop.
 
 Usaremos 2 de 4Gb e 1 de 8Gb
 
@@ -185,9 +177,9 @@ Usaremos 2 de 4Gb e 1 de 8Gb
 ├── 133. Bibliografia, Referências e Links Úteis.txt
 ├── 134. Slides Módulo 05.pdf
 
-### PART 4 - 
+## PART 4 - Criando Cluster Hadoop e buscando Bath com Sqoop
 
-**Vou escrever e tirar print das principais partes, par alemrbar e nao ficarm somente como HD**
+**Vou escrever e tirar print das principais partes, para lembrar e não ficaram somente como HD**
 
 
 
@@ -199,14 +191,14 @@ Usaremos 2 de 4Gb e 1 de 8Gb
 + Criar na WAS a instancia com DataNode
 
 ├── 110. Implementação do Data Lake em Nuvem  Conectando nas Instâncias EC2 via SSH.mp4
-+ Ttera que abrir em 2 instancias do Putty para concetcat
++ Terá que abrir em 2 instâncias do Putty para conectar
 + Conectados com a chave particular da AWS
-+ OBS: As inscnaica do EC2 podem ser copiadas, entao, depois de criada, voce pod cuplicar os DataNOde
++ OBS: As instância do EC2 podem ser copiadas, então, depois de criada, você pode duplicar os DataNOde
 
 ├── 111. Implementação do Data Lake em Nuvem  Criando Usuário de Configuração.mp4
 + Primeiro, temos que encontrar o endereço DNS público e privado
-+ OBS: configuraçoes de rede da AWS podem ser alteradas, peloa ROuteS3, mas é pago
-+ O que faz: Cria-se usuários sudo específicos para o haddop nas inatnaicas
++ OBS: configurações de rede da AWS podem ser alteradas, pelo RouteS3, mas é pago
++ O que faz: Cria-se usuários sudo específicos para o hadoop nas instâncias
 
 ````
 Criando usuário hadoop (nos 3 servidores do cluster)
@@ -219,7 +211,7 @@ Obs: Inclua o usuário hadoop no arquivo /etc/sudoers
 
 ├── 112. Implementação do Data Lake em Nuvem  Instalando o Java JDK nas Máquinas do Cluster.mp4
 + Instalar JDK nas 3 máquinas
-+ para acessar o usuário habop `su haddop`
++ para acessar o usuário hadoop `su hadoop`
 + `sudo yum install wget`
 
 ````
@@ -276,7 +268,7 @@ java -version
 + Vamos usar somente DNS
 
 ├── 114. Implementação do Data Lake em Nuvem  Configurando Autenticação SSH Sem Senha 1.2.mp4
-+ Para uma máquina se ligar a outra semm precisar de senha, vamos criar uma conexao SSH
++ Para uma máquina se ligar a outra sem precisar de senha, vamos criar uma conexão SSH
 
 ````
 # Instalação Data Lake
@@ -329,7 +321,7 @@ ssh hadoop@ip-172-31-14-249.us-east-2.compute.internal
 
 ├── 115. Implementação do Data Lake em Nuvem  Configurando Autenticação SSH Sem Senha 2.2.mp4
 
-COntinauaçao do anterior
+Continuação do anterior
 
 
 ├── 116. Implementação do Data Lake em Nuvem  Instalação do Hadoop.mp4
@@ -382,31 +374,31 @@ source .bash_profile
 ````
 ├── 117. Implementação do Data Lake em Nuvem  Configuração do Hadoop no Node Master.mp4
 
-Aqui usamos DNS privados, entoa, se voce implementar, vai ter que olhar o seu EC2
+Aqui usamos DNS privados, então, se você implementar, vai ter que olhar o seu EC2
 
 ├── 118. Implementação do Data Lake em Nuvem  Configuração do Hadoop nos Nodes Slaves.mp4
 
-+ **MUITO INTERRESSANTE**: Como esass máquina vao ser ligadas e fizmeos um SSH sem senha: **EU COPIO DE UMA PASTA A OUTRA TODO O DIRETÓRIO HADDOP: DA MASTER PAR AO SLAVE**
++ **MUITO INTERESSANTE**: Como essa máquina vai ser ligadas e fizemos um SSH sem senha: **EU COPIO DE UMA PASTA A OUTRA TODO O DIRETÓRIO HADOOP: DA MASTER PARA SLAVE**
 
 ├── 119. Implementação do Data Lake em Nuvem  Inicializando e Testando o Cluster na Nuvem.mp4
 
 + Formatar o namenode 
-+ Depois suobe, inicializa o HDFSS
++ Depois soube, inicializa o HDFS
 
-**NO FIMNAL, COM O HADDOP SUBIDO, ELE OFERECE UMA PAGINA WERB PARA VSIUALIZAR**, ELEA É NA PORTA 9870 
+**NO FINAL, COM O HADOOP SUBIDO, ELE OFERECE UMA PÁGINA WEB PARA VISUALIZAR**, ELA É NA PORTA 9870 
 
 
 
 
 ├── 120. O Que é Amazon AWS RDS.mp4
-+ Amaozn RDS é o banco relacional da Amaozn: POde ser: AuroraDb (é um mysql/psotregre modificado pela amzon), MySQL, PostGre, SQLServer, MariaDB
++ Amazon RDS é o banco relacional da Amazon: POde ser: Aurora Db (é um mysql/psotregre modificado pela amazon), MySQL, PostGre, SQL Server, MariaDB
 + É fácil criar, rapidinho
 
 
 ├── 121. Preparando o Banco de Dados Transacional com PostgreSQL.mp4
-+ Procure o pgAdmin para concetatr no posgree
++ Procure o pgAdmin para conectar no postgre
 + O **CLIENTE ABRE NO BROWSER**
-  - Clique em Serve e coloca as coisas
+  - Clique em Server e coloca as coisas
 
 
 ├── 122. Conectando Remotamente no Banco de Dados.mp4
@@ -422,58 +414,60 @@ Aqui usamos DNS privados, entoa, se voce implementar, vai ter que olhar o seu EC
 ├── 127. Importando Dados do Banco Transacional Para o Data Lake.mp4
 ├── 128. Preparando o Ambiente Web Para o Data Lake e Agendando Jobs.mp4
 
-## O que é o AWS RDS
+### O que é o AWS RDS
 
-BEm, para fazer o procesasmento em Batch precisamos de um DB estrutuardo, uma bnaoc de dados relacionalo **AMAZON RDS**.
+BEm, para fazer o processamento em Batch precisamos de um DB estruturado, um banco de dados relacional **AMAZON RDS**.
 
-De qualquer forma, voce pode criar um local tambem
+De qualquer forma, você pode criar um local também
 
-Com o RDS da amaozn, há uma simplificaçAe tanta coisa, que ta matando a profissoa de DBA. POis dá para automatizar as tarfeas de uma DBA
+Com o RDS da amazon, há uma simplificação de tanta coisa, que está matando a profissão de DBA. POis dá para automatizar as tarefas de uma DBA
 
-## Haddop Sqoop
+### Hadoop Sqoop
 
-Criando a camad de aquisiçâo de dados
+Criando a camada de aquisição de dados
 
-O apache sqoop nao é a.
+O apache sqoop não é a.
 
 **Instalar**
 
-Vamos instalar o Sccop no nameNode
+Vamos instalar o Sqoop no nameNode
 
-+ Baixo wget papor um url 
++ Baixo wget por um url 
 + Descompacta
 + Renomeia e altera seu path
-+ COloca as permisoes
-+ crescenta varaivesi de ambiente
++ COloca as permissões
++ crescenta variáveis de ambiente
 
-`sccop helper`
+`sqoop helper`
 
-O sccop nao vem drives, entoa vaos ter que baixalos manualemnte
+O scoop nao vem drives, então vamos ter que baixá-los manualmente
 
-**Observaçoes**
-+ O sccop é para genrencia o Haddop entao, temos duas funçoes
-+ IMportar dados de fora par ao haddop
-+ Exportar dados do haddop para algo de fora
+**Observações**
++ O sqoop é para gerencia o Hadoop então, temos duas funções
++ IMportar dados de fora para o hadoop
++ Exportar dados do hadoop para algo de fora
 
-**TroubleSHotting: Usando Sccop e AWS**
-+ O InBOund default da AWS nao permite acesso alem da sua maquina. ENtao se voce tentea acessar o banco de uma das instancias EC2, vai dar erros, pois elas nao sao a sua máquina/net
+**TroubleShooting: Usando Sqoop e AWS**
 
-**COmprando MapREcuce e Sccop**
-+ O Sccop faz apenas a parte do "MAP"
++ O InBOund default da AWS não permite acesso além da sua máquina. ENtão se você tenta acessar o banco de uma das instâncias EC2, vai dar erros, pois elas nao sao a sua máquina/net
 
-## Lab 2
+**Comprando MapReduce e Sqoop**
+
++ O Sqoop faz apenas a parte do "MAP"
+
+## PARTE 5 - Lab 2
 
 Permite acessar o HDFS Via Browser
 
-## Lab 3
+## PARTE 6 - Lab 3
 
-Criar JObs, para fazer a cargas e buscar os dados de noite.
-
-
+Criar Jobs, para fazer a cargas e buscar os dados de noite automaticamente com sqoop
 
 
 
 
 
-https://cdn-videos.lpsg.com/data/photos/s/9432/9432701-1637899893-ff61ec5ec705f2ef36311ee9cf5a0f14.jpg
-https://cdn-videos.lpsg.com/data/photos/s/9432/9432731-1637899902-6b9287820a24de7e9c53eeb1f4aff498.jpg
+
+
+
+
