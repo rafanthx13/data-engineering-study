@@ -1,8 +1,13 @@
 # ML em Larga Escala - Parte 1
 
-### PARTE 1 - Teoiria de ML em Larga Escala e Spark
+## Resumo
 
-## Reumo do que vamos fazer
+Crair Cluster, Instalar spark /(masteNode e workNodes); Teoria do que é escalbildaide e larga-escala
+
+
+## PARTE 1 - Teoiria de ML em Larga Escala e Spark
+
+### Reumo do que vamos fazer no próximos caps
 
 + Executar um modelo de ML em Produção
 + Estudar ML

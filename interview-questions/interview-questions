@@ -1,0 +1,135 @@
+Em banco de dados, o que significa desnormalização? Cite um exemplo onde a técnica pode ser útil.
+
+Qual a diferença entre star schema e snowflake schema?
+
+Desnormalização é o processo contrário ao de normalização, e portanto, visa apresentar redundância de dados. Se a normatização é dividir os dados em tabelas com ForeignKey para evitar repetir um ou mais registro se repitam, a desnormatização é juntar esse dados.
+
+Essa técnica é útil para a criação dos schemas de DataWarehouse, pois o DW foi construido para atender mais a consultas (SELECTs da  lingaugem SQL) e a normalização geralmente piora a performance de consultas que envolvam muitas tabelas. Por exemplo: Se minha consulta fizer 10 JOINs com outras tabelas, seria muito mais performático e rápido fazer essa consulta no DW, onde por está desnormatizado, os dados dessas 10 tabelas, em grande parte, estaria juntos numa mesma tabela fato. Assim haveria redudância de dados mas tornaria a consulta muito mais rápida, pois estaria evitando fazer muito JOIN.
+
+O que é a difenreça entre star/snowflake
+
+
+Star Schema é quando as tabelas Dimensões não estão normatizadas, enquanto que snowflake há alguma normatização nelas. Assim, o schema snowflake vai apresentar mais tabela que o starschema.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import requests
+import numpy as np
+import pandas as pd
+
+r = requests.get('https://coderbyte.com/api/challenges/json/age-counting')
+# convert to  lsit of strings
+alist = r.json()['data'].split(',')
+alist = list(map(lambda x: x.strip(), alist))
+
+# get age elements
+age_list = []
+for el in alist:
+  if(el.startswith('age=')):
+    age_list.append(el)
+
+# convert from string to int of the age
+age_list = list(map( lambda x: int(x.split('=')[-1]), age_list))
+
+# count  > 50
+c = 0
+for age in age_list:
+  if(age >= 50):
+    c = c + 1
+# final result
+print(c)
+
+
+
+function StringChallenge(str) { 
+  // ex: se tiver 8 numeros 8 , eh true, e so vale para 2 a 9
+  // javascript
+  let bool_value = false;
+  for (let i=0; i<str.length; i++){
+    let the_number = parseInt(str[i]);
+    let count_number = 0;
+    if(the_number != 1){
+      for (let j=i; j < str.length; j++ ){
+        if(str[j] == the_number){
+          count_number += 1;
+        } else {
+          //sai, pois so aceita consecutivo
+          break
+        }
+      }
+      if(count_number == the_number){
+        bool_value = true;
+      }
+    }
+  }
+
+  return bool_value;
+  // code goes here  
+  // return str; 
+
+}
+   
+// keep this function call here 
+console.log(StringChallenge(readline()));
+
+
+
+function ArrayChallenge(arr) { 
+  // armzana maior lucro que vai obter
+  let biggest_lucro = -1
+  // interar no arry
+  for(let i=0; i < arr.length; i++){    
+    let single_stock = arr[i]
+    // iterra  no valor
+    for(let j=i; j < arr.length; j++){
+      // calcula lucro e verfica se eh maior que o do acumulador
+      let lucro = arr[j] - single_stock
+      if(lucro > biggest_lucro){
+        biggest_lucro = lucro
+      }
+    }
+  }
+  return biggest_lucro; 
+}
+   
+// keep this function call here 
+console.log(ArrayChallenge(readline()));
+
+/* write your SQL query below */
+
+SELECT 
+  FirstName,
+  LastName,
+  ReportsTo,
+  Position,
+  Age,
+  CASE
+    WHEN ReportsTo = "Jenny Richards"
+      THEN "CEO"
+      ELSE "None"
+  END as "Boss Title"
+FROM maintable_F4CCI
+WHERE 
+  maintable_F4CCI.ReportsTo = "Jenny Richards" 
+  OR
+  maintable_F4CCI.ReportsTo IS NULL
+ORDER BY Age
+;

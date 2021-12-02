@@ -1,0 +1,15 @@
+# Cria a imagem docker
+sudo docker build . -t iris-predictor
+
+# Parâmetros do Docker run:
+# https://docs.docker.com/engine/reference/commandline/run/
+
+# Executa o container docker
+sudo docker run --rm -d -p 50052:50052 --name iris-predictor iris-predictor
+sudo docker run -it iris-predictor bash
+
+# Verificando ip do container
+sudo docker inspect id-container
+
+# Executa a chamada cliente
+python grpc_client.py --host 172.17.0.2 --port 50052
