@@ -10,12 +10,10 @@ Vamos concluir o nosos projeto.
 
 É uma estatisca movel, numa serie temporais com uma janela
 
-img-c4-05-01
-
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-04-ml-in-cluster/imgs/img-c4-05-01.png)
 No exempllo a seguri: calculamos meiads numa janela de 7 potnos
 
-img-c4-05-02
-
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-04-ml-in-cluster/imgs/img-c4-05-02.png)
 link do post sobre rolling average
 
 How do I calculate a rolling average?
@@ -23,44 +21,39 @@ https://www.portent.com/blog/analytics/rolling-averages-math-moron.htm
 
 Grafico da qtd de visitas
 
-img-c4-05-03
-
-Percb que há alguns picaos. Há alguma tendencia
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-04-ml-in-cluster/imgs/img-c4-05-03.png)
+Percb que há alguns picaos. Há alguma tendência
 
 
 gafico da rolling average
-img-c4-05-04
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-04-ml-in-cluster/imgs/img-c4-05-04.png)
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-04-ml-in-cluster/imgs/img-c4-05-05.png)Essa tencica é bem pesada. Demorou 2 ho para fazer isso no nosos dataste
 
-img-c4-05-05
-Essa tencica é bem pesada. Demorou 2 ho para fazer isso no nosos dataste
-
-img-c4-05-06
-
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-04-ml-in-cluster/imgs/img-c4-05-06.png)
 ROlling Vaerage é um tipo de convoluçâo (CNN
 
-img-c4-05-07
-
-oOu seja, calculcar média aqui é inutl, já ue se trata de séries temporais. ENtao, apra reolveir isso, precisamos de algo mais poderoso
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-04-ml-in-cluster/imgs/img-c4-05-07.png)
+oOu seja, calculcar média aqui é inutl, já ue se trata de séries temporais. ENtao, para reolveir isso, precisamos de algo mais poderoso
 
 
 ## PARTE 2 - JUPYTER not 2 - Rolling Calculations in time series
 
-ELe é basicamente dedicada ao calculo dessa staticas rolantes
+Ele é basicamente dedicada ao calculo dessa staticas rolantes
 
 lag: tamanho da janela
 
 ### Dicas para executar hardware
 
-Essa rllin gcomputing é muito pesadas, entao a seguri há algumas dicas.
+Essa rllin gcomputing é muito pesadas, então a seguri há algumas dicas.
 
-1. Salve o seu progresso no formato '.parquet' para poder dedicar um notebobok somente para fazer esse processamretno. Parquet é o formato preferido do spark. Ele nao so salva dados, mas salva es
+1. Salve o seu progresso no formato '.parquet' para poder dedicar um notebobok somente para fazer esse processamretno. Parquet é o formato preferido do spark. Ele não so salva dados, mas salva es
 2. improima duraten o procesos para acompnaha
 
 ### Calculo da rolling
 
-media, diferneaç, desvio padrao, max e min
+media, diferneaç, desvio padrão, max e min
 
-juntamos tudo (esse processo é coplexo, leia o codigo e video - aual 83 a 85
+juntamos tudo (esse processo é coplexo, leia o códigos e video - aual 83 a 85
 3. use coamando 'htop' para montiorra uso da 'cpu'
 
 
@@ -75,7 +68,7 @@ O que fazmos
 
 + Os addos estao desbalanceados, agente faz um seu balancemnetocom uma tecnica simples
 
-+ Vamos por dados em mororaia (esse é traalho do en geherio de dados, de rodar o codigo de ML com a melhor perfomance posisivle)
++ Vamos por dados em mororaia (esse é traalho do en geherio de dados, de rodar o códigos de ML com a melhor perfomance posisivle)
 
 ````
 train_downsalmped.cache()
@@ -96,7 +89,7 @@ testing.cache()
 **Vamos construir um piplne usando api java**
 
 porque java:
-+ pythno e R sao excelente para anlise de dados, agora uma aplicação automatizada, talvez java/scala seja melhor
++ pythno e R são excelente para anlise de dados, agora uma aplicação automatizada, talvez java/scala seja melhor
 
 porque Hbase
 + Hbase é NoSQL que roda sobre o HDFS.
@@ -105,9 +98,9 @@ porque Hbase
 O piplein é: ETL e por num local par aso cinceits poderem acessar os dados.
 
 
-### VM da clidera
+### VM da clouldera
 
-Usaremos uma VM da cloudera 'QUicjStarts for CDH 5.13" para virtual box
+Usaremos uma VM da cloudera 'QuickStats for CDH 5.13" para virtual box
 
 Poruq eusamos isso:
 + Ja vem com GUI
@@ -126,14 +119,14 @@ Assim o eclipse vai econtrar os JARs que queremos.
 
 Famozs o mESMO CO as pastas de mapreduce, hfs, hbase.
 
-Por fim, nao deve masi ter problema ao importar as PAI java
+Por fim, não deve masi ter problema ao importar as PAI java
 
 ## MExendo com Hbse
 
 use o shell para acessar hbase
 
-execute o codigo java
+execute o códigos java
 
-observe que nosos codigo criou a taebla hbase.
+observe que nosos códigos criou a taebla hbase.
 
-POr fim, voce pode incluir outros itens e brinar amais até que seu programa java tenha capaccaide de fazer diversas funçoes no Hbase
+Por fim, você pode incluir outros itens e brinar amais até que seu programa java tenha capaccaide de fazer diversas funçoes no Hbase

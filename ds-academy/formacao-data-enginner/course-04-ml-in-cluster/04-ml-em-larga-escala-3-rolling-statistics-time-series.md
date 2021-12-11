@@ -16,25 +16,20 @@ Usamos o JupyterNotebbok rodandno o pyspark no nosos cluster e tendocomo o rigem
 
 **Caso de uso de ML**
 
-img-c4-04-01
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-04-ml-in-cluster/imgs/img-c4-04-01.png)
+Iremos fazer previsão de defeito de uma máquina de acordo com dados de gestores.
 
-Iremos fazer previsâo de defeito de uma máquina de acordo com dados de gestores.
-
-img-c4-04-02
-
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-04-ml-in-cluster/imgs/img-c4-04-02.png)
 ### Bussiness Case
 
-img-c4-04-03
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-04-ml-in-cluster/imgs/img-c4-04-03.png)
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-04-ml-in-cluster/imgs/img-c4-04-04.png)
+Vamos quere saber se a maquian vai falhar nos próximos 7 dias
 
-img-c4-04-04
-
-Vamos quere saber se a maquian vai falhar nos proximos 7 dias
-
-img-c4-04-05
-
+![](/home/rhavel/Documentos/STUDY-PROJECTS/data-engineering-study/ds-academy/formacao-data-enginner/course-04-ml-in-cluster/imgs/img-c4-04-05.png)
 ### Hardware : Caso sua maquina for fraca
 
-Caso sua maquna for fraca para as 3 virtual box, ou nao consiga montar um cluster
+Caso sua maquna for fraca para as 3 virtual box, ou não consiga montar um cluster
 
 **A AZURE OFERECE UMA MAQUINA PARA CIENCIA DE DADOS GRATUITA. CENTOS  e tudo o mais (py, jupyete, spark, hdfs, spark em cluster)**
 
@@ -45,12 +40,6 @@ https://docs.microsoft.com/pt-br/azure/machine-learning/data-science-virtual-mac
 ````
 /opt/spark/conf/spark-defaults.conf.template
 ````
-
-````
-$ 
-````
-
-
 
 Copie esse arquivo com o comando
 
@@ -69,7 +58,7 @@ editar arquivo
 $ vi spark-defaults.conf
 ````
 
-ajuste os parametrod de 'spark.drive.memory' de 5g par ao que voce quiser.
+ajuste os parametrod de 'spark.drive.memory' de 5g par ao que você quiser.
 
 COnfigure spar.local.dir para '/temp' pois pé para fazer operaçoes de disco naessa pasta
 + Pode ser um disco de perfomance melhor
@@ -91,9 +80,9 @@ $ * TAB hard TAB nofile 65536
 
 Onde TAB é a tecla tab, não é a string 'tab'
 
-Estou modificando o numero de arquivos que podem ser abertso pelos sitsema operacional, pois o apache esparkvai abrir vários arquivos, mas **O LINUX/WINDOWS TEM UM LIMITE DE ARQUIVOS QUE PODEM SER ABERTOS AO MESMO TEMPO**
+Estou modificando o numro de arquivos que podem ser abertso pelos sitsema operacional, pois o apache esparkvai abrir vários arquivos, mas **O LINUX/WINDOWS TEM UM LIMITE DE ARQUIVOS QUE PODEM SER ABERTOS AO MESMO TEMPO**
 
-Digite o codigo abaico pra sair do vi
+Digite o códigos abaico pra sair do vi
 ````
 $ :q
 ````
@@ -134,7 +123,7 @@ ou seja, configuramos para usar o spark do remoto.
 
 
 
-###
+### Executando
 
 Demoorou de 3h a 4h para executear os 3 jupyter notebooks
 
@@ -150,7 +139,7 @@ Nocaso, vamos usar outros valore de outros colunas para os valores faltantasn qu
 
 **Construççao de grafico**
 
-Usamos lingaugme SQL apra acessar os dados
+Usamos lingaugme SQL para acessar os dados
 
 ````
 sqlStatement = """
@@ -167,8 +156,8 @@ plotdata = spark.sql(sqlStatement).toPandas();
 O que vamos fazer
 + Extraiomos dados do dia
 + Utilizamos regras de neǵocio + matematica/estatiscia para fazer isso
-+ APLICAMOS NORMALIZAÇÃO para nivelar todas as variavies. Agente só está mudando a escala mas nâo a informação
++ APLICAMOS NORMALIZAÇÃO para nívelar todas as variavies. Agente só está mudando a escala mas não a informação
 + OneHot ENconding para dados categóriocs
-+ Reduçâo de simensionalidade com PCA. O PCA já é uma tecnica de ML nao-supervisionado. Vamosgerar 20 componentes principais 
++ Reduçâo de simensionalidade com PCA. O PCA já é uma tecnica de ML não-supervisionado. Vamosgerar 20 componentes principais 
 
 
