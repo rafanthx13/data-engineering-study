@@ -1,5 +1,15 @@
 # INstall airflow
 
+## git
+
+git reset HEAD -- virtuall_env
+
+esclui da staging area (ou seja do git ad d--all) tudo dess apasta.
+
+ou use
+
+git reset
+
 ##  virtual env
 
 $ pip install virtualenv
@@ -165,8 +175,24 @@ Com isso conseguimos fazer com que o Airflow execute no ambiente:
 Mas como pode perceber, deixar aberto o painel dessa forma não é seguro. Vamos tornar mais seguro.
 
 
+Depois adicione essa linhas para o seu airflow do heroku pedir altorizaço
+
+heroku config:set AIRFLOW__WEBSERVER__AUTHENTICATE=True
+heroku config:set AIRFLOW__WEBSERVER__AUTH_BACKEND="airflow.contrib.auth.backends.password_auth"
 
 
+execute o codigo aseguir no promto do heroku, com o comando heroku run python
+
+import airflow
+from airflow import models, settings
+from airflow.contrib.auth.backends.password_auth import PasswordUseruser = PasswordUser(models.User())
+user.username = 'admin'
+user.email = 'me@gilsondev.in'
+user.password = 'password'session = settings.Session()
+session.add(user)
+session.commit()
+session.close()
+exit()
 
 
 
