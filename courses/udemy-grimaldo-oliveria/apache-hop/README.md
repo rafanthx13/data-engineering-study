@@ -37,7 +37,12 @@ if "%HOP_OPTIONS%"=="" set HOP_OPTIONS=-Xmx2048m
 + o parametro: Xmx2048m significa que vai pegar até 2GB de RAM
 + Informa que a variavel do Java que vai pegar é a 'HOP_JAVA_HOME' e se nâo tiver a 'JAVA_HOME'
 
-## 1 projeto
+## 1 projeto - Pepiline para vinhos
+
+** Aulas**: 6 a 10
+
+**Arquivo**: 01-first-pipeline-wines.hpl
+
 **Criar projeto**
 
 Cloque no P com + (Create new project)
