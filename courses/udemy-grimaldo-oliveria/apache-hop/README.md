@@ -1,22 +1,23 @@
 # Apache Hop - Grimaldo Oliveira
 
-## Terminalogoa em relaçao ao Pentaho
+Curos: [Academia Engenharia de Dados](https://www.udemy.com/course/academia-engenharia-de-dados/)
 
-Hop		Pentaho
-Pipeline = Tranformation
-Workflow = Job
+## Terminologia em relação ao Pentaho
 
-## Instalar
++ Apache Hop == derivado do Pentaho
 
-depden de ter java onsmtalado, e a variavel JAVA_HOME
 
-É um zip, descopcat e usa os sqruivos
++ Pipeline == Transformation
++ Workflow == Job
 
-``hop-gui.bat hop-gui.sh``
+## Como Instalar
 
-## Configruando algumas coisas
+1. Baixar o `zip` e executar ``hop-gui.bat // hop-gui.sh``
+2. depende de ter java instalado, e a variável `JAVA_HOME`
 
-esse sarquiv ``hop-gui` nas primeiras linhas tem algo que pode ser configurado
+## Configurando algumas coisas
+
+Esse arquivo ``hop-gui` nas primeiras linhas tem algo que pode ser configurado
 
 ````bat
 REM set java primary is HOP_JAVA_HOME fallback to JAVA_HOME or default java
@@ -34,26 +35,113 @@ if "%HOP_OPTIONS%"=="" set HOP_OPTIONS=-Xmx2048m
 ````
 
 
-+ o parametro: Xmx2048m significa que vai pegar até 2GB de RAM
-+ Informa que a variavel do Java que vai pegar é a 'HOP_JAVA_HOME' e se nâo tiver a 'JAVA_HOME'
++ O parâmetro: **Xmx2048m significa que vai pegar até 2GB de RAM**
++ Informa que a variável do Java que vai pegar é a 'HOP_JAVA_HOME' e se não tiver a 'JAVA_HOME'
 
-## 1 projeto - Pepiline para vinhos
+## Projetos realizados no curso
 
-** Aulas**: 6 a 10
+### projeto 1 - Pipeline para vinhos
 
-**Arquivo**: 01-first-pipeline-wines.hpl
+**Aulas**: 6 a 10
+
+**Arquivo De Entrada:** `vinhos_mundo.csv`
+
+**Arquivo do projeto:**`01-first-pipeline-wines.hpl`
 
 **Criar projeto**
 
-Cloque no P com + (Create new project)
- 
-Selecione um direotiro para se o seu ambiente
+Clique no P com + (Create new project)
+
+Selecione um diretório para se o seu ambiente
 
 **Criar pipeline**
-+ cloque no botao '1+' no topo esquerda (na barra lateral, o 1 de cima pra baixo) e selecione pipleine
++ clique no botão '1+' no topo esquerda (na barra lateral, o 1 de cima pra baixo) e selecione pipeline
 
-+ Clique na área, selecione csv, e selecione o noso saqruivo 'vinhos_mundo'.
-  - Use codificaçâo UTF-8 SMEPRE
++ Clique na área, selecione csv, e selecione o nosso arquivo 'vinhos_mundo'.
+  - Use codificação UTF-8 SEMPRE
 
- Em seguida faremos uma filtragem apra pegar somente aqueles com 'country=It'.
-?+ Na saida, vai gera um csv, o nome da tranformation é 'text input fiçe'. Especifique para ser sCSV e use as 3 abas par agerenciar o processo a ser feito
++ Em seguida faremos uma filtragem para pegar somente aqueles com 'country=It'. 
+
++ Na saída, vai gerar um csv, o nome da transformation é 'text input file'. Especifique para ser CSVe use as 3 abas para gerenciar o processo a ser feito
+
+  ​
+
+### projeto 2 - Pipeline Merge de dados
+
+**Arquivo do projeto:**`02-merge-de-dados.hpl`
+
+**Arquivo De Entrada:** `Cliente.xlsx, Marca.xlsx, Produto.xlsx, Vendas.xlsx`
+
+**Arquivo de Saida:** `merge-dos-dados.csv`
+
+O que é feito de interessante:
++ Merge de dados: Para fazer, é ideal ordenar antes
+
+
+
+### projeto 3 - Ajuste de Strings
+
+**Arquivo do projeto:** `03-ajustar-dataset-cliente-veiculo.hpl`
+
+**Arquivo De Entrada: ** `cliente_veiculo.csv`
+
+**Arquivo de Saida:** sem saída de dados
+
+o que é feito de interessante 
++ tratamento de string
+
+
+
+### projeto 4 - Chamada de API REST
+
+**Arquivo do projeto: ** `04-use-api.hpl`
+
+**Arquivo De Entrada:** chama de API RES de CPF
+
+**Arquivo de Saida:** `saida-api.csv , result_json_api.js`
+
+```
+hop-run.bat -j treinamento -r local -f C:........\05-trata_banco.hpl
+```
+
+
+
+### projeto 5 - Usando DB
+
+Criação de tabelas no PostGreSQL
+
+**Arquivo do projeto:** `05-handle-database.hpl`
+
+
+
+## WorkFlow
+
+No Apache Hop á dois tipos de arquivos: Pipeline e Worflow.
+
+O worflow é o job do pentaho, ou seja, é um orquestrador de pipeline.
+
+O que faz de interessante
++ Tem o sucesso e falha
++ Permite executar n arquivos workflow de forma sequencial/paralela
++ Escreve em log
++ Cria variáveis em memória  que pode ser usadas nos pipeline
+
+O workflow possui passos diferentes do workflow
+
+
+
+## Hop-Run : Executar Hop em CMD
+
+Você executa através do 'hope-run', é possíve então automatizar a carga ao usar em conjunto com `crontab`
+
+Para ver a documentação
+https://hop.apache.org/manual/latest/hop-run/index.html
+
+exemplo
+
+```
+./hop-run.sh -j transforms -r local -f /path/to/workflow/file.hwf
+```
+
+
+
