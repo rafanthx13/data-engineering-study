@@ -1,0 +1,12 @@
+https://aws.amazon.com/pt/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=tier%23always-free&awsf.Free%20Tier%20Categories=*all
+
+DynamoDB
++ NoSQL 25GB
+
+AWS Lambda
++ 1MM
+
+AWS Glue
++ 1MM
+
+Posso usar Azure ou GPC para testar algumas coisisnhas, se atentnado ao que é gratis (alem do que na azure e gcp tem um credito por 30dias)
